@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ContactUs.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <script src="https://kit.fontawesome.com/1a4ebbd5fe.js" crossorigin="anonymous"></script>
+
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <input id="nav-toggle" type="checkbox" />
+      <div class="logo">GYM<strong>BRO</strong></div>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="WorkoutPlans.html">Workout plans</a></li>
+        <li><a href="FormGuide.html">Form guide</a></li>
+        <li><a href="#Calorie Tracker">Calorie tracker</a></li>
+        <li><a href="ContactUs.html">Contact</a></li>
+      </ul>
+      <label for="nav-toggle" class="icon-burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </nav>
+    <div class="contact-sec">
+      <div class="contact-info">
+        <div><i class="fas fa-envelope"></i>contact@gmail.com</div>
+        <div><i class="fas fa-phone"></i>+62 81 234 567 890</div>
+        <div><i class="fas fa-clock"></i>Mon - Fri 7:30AM - 4:30AM</div>
+      </div>
+
+      <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form class="contact" onsubmit="sendEmail(); reset(); return false;">
+          <input type="text" name="name" class="text-box" placeholder="Your name" id="name" required />
+          <input type="email" name="email" class="text-box" placeholder="Your email" id="email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" id="message" required></textarea>
+          <input type="submit" name="submit" class="submit-btn" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "gymb340@gmail.com",
+          Password: "gymb340123",
+          To: "gitapw31@gmail.com",
+          From: document.getElementById("email").value,
+          Subject: "This is the subject",
+          Body: "This is body",
+        }).then((message) => alert("Message Sent Succesfully"));
+      }
+    </script>
+  </body>
+</html>
