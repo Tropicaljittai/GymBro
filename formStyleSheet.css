@@ -124,9 +124,9 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   background: red;
-  padding: 1.5rem;
+  padding: 1.75rem;
   color: white;
-  margin: 5rem;
+  margin: 6.5rem;
   cursor: pointer;
   transition: all 0.4s ease;
 }
@@ -171,21 +171,39 @@ html::-webkit-scrollbar-thumb {
 .post-img:hover {
   transform: scale(1.1);
 }
+
+.wrapper{
+  background:rgba(0, 0, 0.64);
+  display: block;
+}
 .video-player {
-  width: 80%;
-  position: absolute;
-  top: 55%;
+  width: 60%;
+  position: fixed;
+  top: 17.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
   display: none;
+  z-index: 5;
+  transition: all 0.3s;
 }
+
+.video-player video{
+  width: 100%;
+  position: fixed;
+  border-radius: 5px;
+  border: 3px solid #fff;
+  object-fit: cover;
+  z-index: 5;
+}
+
 .close-btn {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 30px;
   cursor: pointer;
+  z-index: 5;
 }
 .active {
   background: #434343;

@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheet.css" />
-    <link rel="stylesheet" href="responsive.css" />
-
-    <script src="script.js"></script>
-    <title>Document</title>
+    <title>GymBro</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="responsivehome.css">
+     <link rel="stylesheet" href="aos.css" />
   </head>
   <body>
     <nav>
@@ -18,8 +14,8 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="WorkoutPlans.html">Workout plans</a></li>
         <li><a href="FormGuide.html">Form guide</a></li>
-        <li><a href="Calorie.html">Calorie tracker</a></li>
-        <li><a href="ContactUs.html">Contact</a></li>
+        <li><a href="#Calorie Tracker">Calorie tracker</a></li>
+        <li><a href="#Contact">Contact</a></li>
       </ul>
       <label for="nav-toggle" class="icon-burger">
         <div class="line"></div>
@@ -27,12 +23,114 @@
         <div class="line"></div>
       </label>
     </nav>
-    <div class="title">
-      <img src="Arnold.jpg" />
-      <div class="text">
-        GymBro
-        <div class="desc">We provide free gym workout plans, and help guide people to live healthier. Achieve the body goal of your own, provided by our workout plans and calorie tracker.</div>
+    <div class="container" id = "home" data-aos = "fade-right" data-aos-duration="1000" data-aos-once="false" >
+      <div class="title" data-aos = "fade-right" data-aos-duration="1000" data-aos-once="false">
+        GymBro</div>
+        <div class="desc" data-aos = "fade-left" data-aos-duration="1000" data-aos-once="false">We provide free gym workout plans, and help guide people to live healthier. Achieve the body goal of your own, provided by our workout plans and calorie tracker.
+        </div>
+    </div>
+
+    <div class="container2">
+      <div class="filter-container">
+        <div class = "heading" data-aos = "zoom-in" data-aos-duration="1000" data-aos-once = "false">
+        <strong> What we Provide</strong>
+        </div>
+        <div class="category-head">
+          <ul>
+            <div class="category-title" data-aos = "fade-down" data-aos-duration = "1000" data-aos-once = "false">
+              <a href="#plan"><img src = "img/plan.png"></a>
+              <li>Workout Plans</li>
+            </div>
+            <div class="category-title"  data-aos = "fade-down" data-aos-duration = "1000" data-aos-delay = "500" data-aos-once = "false">
+              <a href="#form"><img src = "img/arm.png"></a>
+              <li>Form Guide</li>
+            </div>
+            <div class="category-title"  data-aos = "fade-down" data-aos-duration = "1000" data-aos-delay = "750" data-aos-once = "false">
+              <a href = "#calcalc"><img src = "img/calorie.png"></a>
+              <li>Calorie Tracker</li>
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
+
+    <div class = "container3" id = "plan">
+      <div class = "div1" data-aos = "slide-up" data-aos-duration="1000" data-aos-once = "false">
+        <img src = "img/workoutplan.jpg">
+          <br>
+          Workout Plans
+      </div>
+      <div class = "div2" data-aos = "slide-up" data-aos-duration="1000" data-aos-once = "false">
+        Workout plans have many benefits. They can motivate you, teach you new things, and make the whole endeavor of getting regular exercise so much easier. A good workout plan keeps you going and makes you more proficient, both at movement and at building healthy habits
+      <br><br>
+      <div class = "button">
+      <a href = "WorkoutPlans.html">
+      <button class="learn-more">
+      <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">Visit</span>
+      </button>
+    </a>
+      </div>
+    </div>
+  </div>
+  <div class = "container3" id = "form" >
+    <div class = "div1" data-aos = "slide-up" data-aos-duration="1000" data-aos-once = "false">
+      <img src = "img/benchpress.jpg">
+        <br>
+        Form Guide
+    </div>
+    <div class = "div2" data-aos = "slide-up" data-aos-duration="1000" data-aos-once = "false">
+      If you are new to strength training or need a bit of a refresher on good form, you are in the right place. Good form allows you to reap all the benefits of your workout and avoid injuries at the same time. No matter your age, current fitness level, or sex, you can benefit from weight training with the right technique.
+    <br><br>
+    <div class = "button">
+    <a href = "FormGuide.html">
+    <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+    <span class="icon arrow"></span>
+    </span>
+    <span class="button-text">Visit</span>
+    </button>
+    </a>
+    </div>
+  </div>
+</div>
+
+
+    <div class = "container3" id = "calcalc">
+      <div class = "div1" data-aos = "slide-up" data-aos-duration="1000" data-aos-once = "false">
+        <img src = "img/calcalc.jpg">
+          <br>
+          Calorie Tracker
+      </div>
+      <div class = "div2" data-aos = "slide-up" data-aos-duration="1000" data-aos-once = "false">
+      Counting calories can help you lose weight by bringing awareness to what you eat each day. This can help you identify eating patterns that you may need to modify, keeping you on track to reach your goals.
+      <br><br>
+      <div class = "button">
+      <a href = "calorietracker.html">
+      <button class="learn-more">
+      <span class="circle" aria-hidden="true">
+      <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">Visit</span>
+      </button>
+      </a>
+      </div>
+    </div>
+    <div class = "contact" data-aos = "zoom-in" data-aos-duration="1000" data-aos-once="false">
+      <a href = "contactus.html">
+      <button> Contact Us!
+      </button>
+    </a>
+    </div>
+      
+    <script src="aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+    </script>
   </body>
 </html>
