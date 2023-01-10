@@ -140,7 +140,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-background-image:url("img/Arnold.jpg");
+background-image:url("img/Arnold.png");
 background-repeat: no-repeat;
 background-size: 1600px;
 }
