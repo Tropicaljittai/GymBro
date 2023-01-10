@@ -6,6 +6,7 @@ var allPosts = document.getElementsByClassName("all");
 
 function stopVideo() {
   videoPlayer.style.display = "none";
+  myVideo.pause();
 }
 
 function playVideo(file) {
