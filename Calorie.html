@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>GymBro</title>
   </head>
   <body>
     <nav>
@@ -70,7 +70,7 @@
     <script>
       const idk = document.getElementById("myChart").getContext("2d");
       var myChart = new Chart(idk, {
-            type: "pie",
+            type: "doughnut",
             data: {
               datasets: [
                 {
@@ -223,7 +223,7 @@
           let data2 = [protein, carbs, fat];
           myChart.destroy();
           myChart = new Chart(idk, {
-            type: "pie",
+            type: "doughnut",
             data: {
               labels: ["Protein", "Carbs", "Fats"],
               datasets: [
