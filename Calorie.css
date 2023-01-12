@@ -105,7 +105,7 @@ html::-webkit-scrollbar-thumb {
   background: #f00;
 }
 
-#menus{
+#menus {
   width: 20rem;
   font-size: 2rem;
   height: 5rem;
@@ -114,9 +114,9 @@ html::-webkit-scrollbar-thumb {
   letter-spacing: 2px;
   border-radius: 5px;
 }
-#gram{
+#gram {
   width: 23rem;
-  height: 5rem; 
+  height: 5rem;
   font-size: 2rem;
   position: center;
   color: var(--White);
@@ -129,7 +129,7 @@ html::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-columns: repeat(1fr);
   max-width: 700px;
-  margin-right: 50px;
+  margin-left: 50rem;
   flex-direction: row;
   justify-content: center;
 }
@@ -138,7 +138,7 @@ html::-webkit-scrollbar-thumb {
   color: #fff;
   font-size: 3.5rem;
   font-weight: 800;
-  text-align:justify;
+  text-align: justify;
   margin-right: 3rem;
   text-transform: uppercase;
   margin-top: 15px;
@@ -154,7 +154,7 @@ html::-webkit-scrollbar-thumb {
   font-size: 1rem;
   cursor: pointer;
   width: 23rem;
-  height: 5rem; 
+  height: 5rem;
   font-size: 2rem;
   position: center;
   color: var(--White);
@@ -162,29 +162,32 @@ html::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-.form-submit:hover{
-    box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.3);
-    outline: 0;
+.form-submit:hover {
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.3);
+  outline: 0;
 }
-.grid{
+.grid {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .form-submit:active {
-    box-shadow: none;
+  box-shadow: none;
 }
-#results{
+#results {
   position: grid;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
-#rs{
+#rs {
   color: #f00;
   position: absolute;
 }
-.resultsf{
-  font-size: 2rem;
-  color:#f00;
+.resultsf {
+  font-size: 2.5rem;
+  color: #f00;
+  margin-left: 3.5rem;
+  width: 20rem;
 }
+
 /* .Addmore {
   background : #333;
   border: 0;
