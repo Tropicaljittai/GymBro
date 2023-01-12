@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="script.js"></script>
-    <title>GymBro</title>
+    <title>Document</title>
   </head>
   <body>
     <nav>
@@ -68,15 +68,33 @@
       <canvas id="myChart"></canvas>
     </div>
     <script>
+      const idk = document.getElementById("myChart").getContext("2d");
+      var myChart = new Chart(idk, {
+            type: "pie",
+            data: {
+              datasets: [
+                {
+                  label: " ",
+                  data: [0],
+                  borderwidth: 1,
+                },
+              ],
+            },
+          });
       function count() {
         const form = document.getElementById("menu");
         const results = document.getElementById("results");
         const errors = document.getElementById("forme");
 
+        function destroychart(){
+          myChart.destroy();
+        }
+
         function showResults(calories, protein, carbs, fat) {
           results.innerHTML = `<p class="resultsf">Calories: ${calories.toFixed(2)} calories. <br> Protein: ${protein.toFixed(2)} <br> Carbs: ${carbs.toFixed(2)} <br> Fat: ${fat.toFixed(2)} </p>`;
           results.style.display = "";
         }
+
         function resetForm(e) {
           if ((e.target.id = "rs")) {
             e.preventDefault();
@@ -85,6 +103,7 @@
             form.reset();
           }
         }
+        
         function errorprompt(msg) {
           errors.innerHTML = msg;
           setTimeout(function () {
@@ -200,10 +219,10 @@
           }
 
           showResults(calories, protein, carbs, fat);
-
+          
           let data2 = [protein, carbs, fat];
-          const ctx = document.getElementById("myChart").getContext("2d");
-          const myChart = new Chart(ctx, {
+          myChart.destroy();
+          myChart = new Chart(idk, {
             type: "pie",
             data: {
               labels: ["Protein", "Carbs", "Fats"],
@@ -217,8 +236,10 @@
             },
           });
         }
+        
         form.addEventListener("submit", submitstate);
         results.addEventListener("click", resetForm, true);
+
       }
     </script>
   </body>
