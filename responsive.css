@@ -89,6 +89,10 @@
   .contact-form .text-box {
     width: 100%;
   }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -125,6 +129,40 @@
   .contact-info {
     display: flex;
     flex-direction: column;
-    font-size: 3rem;
+    font-size: 4.5rem;
+  }
+  .container {
+    margin-left: -10rem;
+  }
+  .grid {
+    padding-top: 20rem;
+    display: block;
+    justify-content: center;
+    float: center;
+    text-align: center;
+    width: 15rem;
+    margin-left: 40rem;
+  }
+  .grid h2 {
+    text-align: center;
+    justify-content: center;
+    font-size: 5rem;
+  }
+
+  #results {
+    justify-content: center;
+    text-align: justify;
+    font-size: 10rem;
+    width: 20rem;
+  }
+  .resultsf {
+    font-size: 4rem;
+  }
+  .pie-chart {
+    margin-top: 100%;
+    margin-left: -8rem;
+    padding-top: 0.15rem;
+    width: 38.5rem;
+    float: left;
   }
 }
