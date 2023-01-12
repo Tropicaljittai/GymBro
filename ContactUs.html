@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="ContactUs.css" />
     <link rel="stylesheet" href="responsive.css" />
     <script src="https://kit.fontawesome.com/1a4ebbd5fe.js" crossorigin="anonymous"></script>
-
+    <link rel ="stylesheet" href = "aos.css">
     <script src="script.js"></script>
     <title>GymBro</title>
   </head>
@@ -30,14 +30,14 @@
     </nav>
     <div class="contact-sec">
       <div class="contact-info">
-        <div><i class="fas fa-envelope"></i>contact@gmail.com</div>
-        <div><i class="fas fa-phone"></i>+62 81 234 567 890</div>
-        <div><i class="fas fa-clock"></i>Mon - Fri 7:30AM - 4:30AM</div>
+        <div data-aos = "fade-right" data-aos-duration = "250" data-aos-delay = "250"><i class="fas fa-envelope"></i>contact@gmail.com</div>
+        <div data-aos = "fade-right" data-aos-duration = "250" data-aos-delay = "500"><i class="fas fa-phone"></i>+62 81 234 567 890</div>
+        <div data-aos = "fade-right" data-aos-duration = "250" data-aos-delay = "750"><i class="fas fa-clock"></i>Mon - Fri 7:30AM - 4:30AM</div>
       </div>
 
       <div class="contact-form">
-        <h2>Contact Us</h2>
-        <form class="contact" onsubmit="sendEmail(); reset(); return false;">
+        <h2 data-aos = "zoom-in" data-aos-duration = "500" data-aos-delay = "0">Contact Us</h2>
+        <form class="contact" onsubmit="sendEmail(); reset(); return false;" data-aos = "fade-left" data-aos-duration = "500" data-aos-delay = "1000">
           <input type="text" name="name" class="text-box" placeholder="Your name" id="name" required />
           <input type="email" name="email" class="text-box" placeholder="Your email" id="email" required />
           <textarea name="message" rows="5" placeholder="Your Message" id="message" required></textarea>
@@ -58,6 +58,13 @@
           Body: "This is body",
         }).then((message) => alert("Message Sent Succesfully"));
       }
+    </script>
+    <script src="aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
     </script>
   </body>
 </html>

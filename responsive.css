@@ -133,20 +133,20 @@
   }
   .container {
     margin-left: -10rem;
+
   }
   .grid {
     padding-top: 20rem;
     display: block;
     justify-content: center;
     float: center;
-    text-align: center;
-    width: 15rem;
-    margin-left: 40rem;
+    width: 40rem;
+    margin-left: 55rem;
   }
   .grid h2 {
+    font-size: 7rem;
     text-align: center;
-    justify-content: center;
-    font-size: 5rem;
+    margin-left: -10rem;
   }
 
   #results {
@@ -157,12 +157,23 @@
   }
   .resultsf {
     font-size: 4rem;
+    margin-left: -5rem;
+    width: 35rem;
   }
   .pie-chart {
-    margin-top: 100%;
-    margin-left: -8rem;
+    margin-top: 25%;
+    margin-left: -6rem;
     padding-top: 0.15rem;
     width: 38.5rem;
     float: left;
+  }
+  .contact-info {
+    color: #fff;
+    max-width: 500px;
+    width: 600px;
+    line-height: 65px;
+    padding-left: 2rem;
+    font-size: 3rem;
+    margin-right: 75px;
   }
 }
