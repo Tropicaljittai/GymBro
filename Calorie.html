@@ -62,6 +62,9 @@
           </div>
         </form>
         <div id="results" style="display: none"></div>
+        <div class="pie-chart">
+          <canvas id="myChart"></canvas>
+        </div>
       </div>
     </div>
     <div class="pie-chart">
@@ -70,28 +73,28 @@
     <script>
       const idk = document.getElementById("myChart").getContext("2d");
       var myChart = new Chart(idk, {
-            type: "doughnut",
-            data: {
-              datasets: [
-                {
-                  label: " ",
-                  data: [0],
-                  borderwidth: 1,
-                },
-              ],
+        type: "doughnut",
+        data: {
+          datasets: [
+            {
+              label: " ",
+              data: [0],
+              borderwidth: 1,
             },
-          });
+          ],
+        },
+      });
       function count() {
         const form = document.getElementById("menu");
         const results = document.getElementById("results");
         const errors = document.getElementById("forme");
 
-        function destroychart(){
+        function destroychart() {
           myChart.destroy();
         }
 
         function showResults(calories, protein, carbs, fat) {
-          results.innerHTML = `<p class="resultsf">Calories: ${calories.toFixed(2)} calories. <br> Protein: ${protein.toFixed(2)} <br> Carbs: ${carbs.toFixed(2)} <br> Fat: ${fat.toFixed(2)} </p>`;
+          results.innerHTML = `<p class="resultsf"><br>Calories: ${calories.toFixed(2)} <br> Protein: ${protein.toFixed(2)} <br> Carbs: ${carbs.toFixed(2)} <br> Fat: ${fat.toFixed(2)} </p>`;
           results.style.display = "";
         }
 
@@ -103,7 +106,7 @@
             form.reset();
           }
         }
-        
+
         function errorprompt(msg) {
           errors.innerHTML = msg;
           setTimeout(function () {
@@ -219,7 +222,7 @@
           }
 
           showResults(calories, protein, carbs, fat);
-          
+
           let data2 = [protein, carbs, fat];
           myChart.destroy();
           myChart = new Chart(idk, {
@@ -236,10 +239,9 @@
             },
           });
         }
-        
+
         form.addEventListener("submit", submitstate);
         results.addEventListener("click", resetForm, true);
-
       }
     </script>
   </body>
