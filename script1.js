@@ -1,13 +1,13 @@
 const track = document.getElementById("image-track");
 
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+const mouseOnDown = e => track.dataset.mouseDownAt = e.clientX;
 
-const handleOnUp = () => {
+const mouseOnUp = () => {
   track.dataset.mouseDownAt = "0";  
   track.dataset.prevPercentage = track.dataset.percentage;
 }
 
-const handleOnMove = e => {
+const mouseOnMove = e => {
   if(track.dataset.mouseDownAt === "0") return;
   
   const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
@@ -30,14 +30,9 @@ const handleOnMove = e => {
   }
 }
 
-window.onmousedown = e => handleOnDown(e);
-
-window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-window.onmouseup = e => handleOnUp(e);
-
-window.ontouchend = e => handleOnUp(e.touches[0]);
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);
+window.onmousedown = e => mouseOnDown(e);
+window.ontouchstart = e => mouseOnDown(e.touches[0]);
+window.onmouseup = e => mouseOnUp(e);
+window.ontouchend = e => mouseOnUp(e.touches[0]);
+window.onmousemove = e => mouseOnMove(e);
+window.ontouchmove = e => mouseOnMove(e.touches[0]);
