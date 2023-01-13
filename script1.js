@@ -1,4 +1,4 @@
-const track = document.getElementById("image-track");
+const track = document.getElementById("image-slider");
 
 const mouseClicked = e => track.dataset.mouseDownAt = e.clientX;
 
