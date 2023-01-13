@@ -6,7 +6,7 @@ body {
   overflow: hidden;
 }
 
-#image-track {
+#image-slider {
   display: flex;
   gap: 4vmin;
   position: absolute;
@@ -16,7 +16,7 @@ body {
   user-select: none;
 }
 
-#image-track > .image {
+#image-slider > .image {
   width: 37vmin;
   height: 53vmin;
   object-fit: cover;
@@ -24,7 +24,7 @@ body {
   transition: transform 0.3s;
 }
 
-#image-track a .image{
+#image-slider a .image{
   width: 37vmin;
   height: 53vmin;
   object-fit: cover;
